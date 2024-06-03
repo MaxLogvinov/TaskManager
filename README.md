@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Приложение для управления задачами
 
-## Getting Started
+Это приложение для управления задачами, разработанное с использованием Next.js, Redux и TypeScript. Приложение позволяет пользователям создавать, просматривать, фильтровать, сортировать и осуществлять пагинацию задач. Администраторы также имеют возможность редактировать и обновлять детали задач.
 
-First, run the development server:
+## Возможности
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Фильтрация задач:** Фильтрация задач по названию, email и статусу.
+- **Сортировка задач:** Сортировка задач по ID в порядке возрастания или убывания.
+- **Пагинация:** Пагинация задач по 3 задачи на страницу.
+- **Создание задач:** Обычные пользователи и администраторы могут создавать новые задачи.
+- **Редактирование задач:** Администраторы могут редактировать детали задач прямо в интерфейсе.
+- **Доступ по ролям:** Различные функции для обычных пользователей и администраторов.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Установка
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Клонируйте репозиторий:**
+   git clone git@github.com:MaxLogvinov/TaskManager.git
+   cd TaskManager
+2. **Установите зависимости:**
+   npm install
+3. **Запустите сервер разработки:**
+   npm run dev
+4. **Откройте приложение в браузере:**
+   Перейдите по адресу http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Использование
 
-## Learn More
+# Фильтрация и сортировка задач
 
-To learn more about Next.js, take a look at the following resources:
+Используйте поля ввода в верхней части списка задач для фильтрации по названию, email и статусу.
+Нажмите кнопку сортировки, чтобы отсортировать задачи по ID в порядке возрастания или убывания.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Пагинация
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Задачи отображаются по 3 на странице.
+Нажмите кнопку "ещё", чтобы загрузить больше задач.
 
-## Deploy on Vercel
+# Создание задачи
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Перейдите к форме создания задачи.
+Заполните детали задачи (название, email, описание).
+Нажмите "Добавить задачу", чтобы добавить задачу.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Редактирование задачи (только для администратора)
+
+Войдите в систему как администратор.
+Нажмите кнопку "Редактировать" рядом с задачей, которую хотите редактировать.
+Измените детали задачи.
+Нажмите "Сохранить", чтобы сохранить изменения.
+
+## Структура проекта
+
+/components: Содержит все компоненты React, используемые в приложении.
+/pages: Содержит страницы Next.js.
+/services: Содержит слайсы Redux и конфигурацию хранилища.
+/styles: Содержит SCSS модули для стилизации.
+/utils: Содержит вспомогательные типы и функции.
