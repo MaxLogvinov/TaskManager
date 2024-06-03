@@ -1,0 +1,47 @@
+@import '../scss/mixins.scss';
+
+.home {
+  max-width: 1280px;
+  @include flex-column-center;
+
+  &__title {
+    @include title;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    @include flex-column;
+    align-items: center;
+    gap: 10px;
+  }
+  &__link {
+    align-items: center;
+    background: #1478ff;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    text-decoration: none;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .home {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .home {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}

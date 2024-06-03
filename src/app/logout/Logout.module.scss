@@ -1,0 +1,26 @@
+@import '../../scss/mixins.scss';
+
+.logout {
+  @include flex-column-center;
+  padding: 100px 0;
+
+  &__title {
+    @include title;
+  }
+  &__container {
+    @include flex-center;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .logout {
+    &__buttons {
+      flex-direction: column;
+    }
+  }
+}

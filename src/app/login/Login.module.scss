@@ -1,0 +1,32 @@
+@import '../../scss/mixins.scss';
+
+.login {
+  @include flex-column-center;
+  padding: 100px 0;
+  &__title {
+    @include title;
+  }
+  &__container {
+    @include flex-center;
+  }
+  &__form {
+    @include flex-column-center;
+    width: 500px;
+    gap: 10px;
+  }
+  &__input {
+    @include input;
+  }
+  &__error {
+    @include error;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .login {
+    &__form {
+      width: 300px;
+      gap: 0px;
+    }
+  }
+}
